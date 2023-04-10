@@ -8,6 +8,7 @@ const jobsheetRoute = require('./router/jobsheet')
 app.use(cors());
 app.use(express.json()); 
 app.use(express.urlencoded({ extended: true}));
+app.use("/images" ,express.static('public'));
 
 const db = require('./models')
 db.sequelize.sync()
